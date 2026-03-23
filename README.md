@@ -1,14 +1,14 @@
-# 🏠 House Price Prediction
+#  House Price Prediction
 ### AI/ML Engineering Internship — Task 6 | DevelopersHub Corporation
 
 ---
 
-## 📌 Task Objective
+# Task Objective
 Predict house prices using property features such as area, number of bedrooms, location, and condition. This project covers the full regression ML pipeline — from data cleaning and EDA to feature engineering, model training, and evaluation using MAE and RMSE.
 
 ---
 
-## 📂 Dataset
+# Dataset
 - **Name:** House Price Prediction Dataset
 - **Samples:** 2000 rows
 - **Original Features:** Id, Area, Bedrooms, Bathrooms, Floors, YearBuilt, Location, Condition, Garage, Price
@@ -19,7 +19,7 @@ Diagnostic analysis revealed near-zero feature-price correlations (Area–Price 
 
 ---
 
-## ⚙️ Preprocessing Steps
+# Preprocessing Steps
 - Dropped `Id` column (row index only)
 - Engineered `HouseAge` = 2024 − YearBuilt (more meaningful than raw year)
 - Encoded `Garage`: Yes → 1, No → 0
@@ -31,7 +31,7 @@ Diagnostic analysis revealed near-zero feature-price correlations (Area–Price 
 
 ---
 
-## 🔧 Feature Engineering
+# Feature Engineering
 Since raw correlations were near-zero, the following interaction and polynomial features were engineered to extract non-linear signal:
 
 | Feature | Description |
@@ -48,7 +48,7 @@ Since raw correlations were near-zero, the following interaction and polynomial 
 
 ---
 
-## 🤖 Models Applied
+# Models Applied
 
 | Model | Description |
 |-------|-------------|
@@ -75,7 +75,7 @@ A negative R² means the model performs worse than simply predicting the mean pr
 
 ---
 
-## 🔍 Key Findings
+# Key Findings
 
 1. **Data diagnosis first** — identified near-zero correlations before modeling, preventing wasted effort on a fundamentally unpredictable target
 2. **Top 5 features** (by Gradient Boosting importance): `Area_x_Floors`, `Area_x_Bedrooms`, `Area_x_Bathrooms`, `Area_x_Condition`, `Age_x_Condition`
@@ -107,50 +107,6 @@ A negative R² means the model performs worse than simply predicting the mean pr
 - **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn
 - **Environment:** VS Code + Jupyter Notebook
 
----
 
-## 🚀 How to Run
-```bash
-# 1. Clone the repository
-git clone https://github.com/Dev-ZishanKhan/house-price-prediction.git
-
-# 2. Navigate into the folder
-cd house-price-prediction
-
-# 3. Install dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-
-# 4. Launch the notebook
-jupyter notebook house_price_prediction.ipynb
-```
-
----
-
-## 📁 Repository Structure
-```
-house-price-prediction/
-│
-├── house_price_prediction.ipynb   # Main Jupyter notebook
-├── house_price.csv                # Dataset
-├── README.md                      # Project documentation
-└── images/                        # Generated plot outputs
-    ├── 01_price_distribution.png
-    ├── 02_area_vs_price.png
-    ├── 03_price_by_location_condition.png
-    ├── 04_price_by_rooms.png
-    ├── 05_price_by_garage.png
-    ├── 06_yearbuilt_vs_price.png
-    ├── 07_feature_distributions.png
-    ├── 08_correlation_heatmap.png
-    ├── 09_actual_vs_predicted.png
-    ├── 10_prediction_line_plot.png
-    ├── 11_residual_plots.png
-    ├── 12_feature_importance.png
-    └── 13_model_comparison.png
-```
-
----
-
-*DevelopersHub Corporation — AI/ML Engineering Internship 2026*
 
 
